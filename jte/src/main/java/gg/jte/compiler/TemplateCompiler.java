@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 
 public class TemplateCompiler extends TemplateLoader {
 
-    public static final boolean DEBUG = false;
+    public static final boolean DEBUG = true;
 
     private final TemplateConfig config;
     private final CodeResolver codeResolver;

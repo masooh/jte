@@ -7,7 +7,7 @@ import java.util.List;
 
 final class LineInfo {
     private static final List<TemplateParser.Mode> ConditionEndModes = Arrays.asList(TemplateParser.Mode.Condition, TemplateParser.Mode.Text);
-    private static final List<TemplateParser.Mode> ForLoopEndModes = Arrays.asList(TemplateParser.Mode.ForLoop, TemplateParser.Mode.Text);
+    private static final List<TemplateParser.Mode> ForLoopEndModes = Arrays.asList(TemplateParser.Mode.ForLoop, TemplateParser.Mode.ForIndexLoop, TemplateParser.Mode.Text);
 
     static boolean isSingleControlStructure(String templateCode, int currentIndex, int endIndex, int startLineIndex, TemplateParser.Mode mode) {
         int endLineIndex = templateCode.indexOf('\n', currentIndex);

@@ -233,6 +233,15 @@ public class TemplateEngineTest {
     }
 
     @Test
+    void loopIndex() {
+        model.array = new int[]{1, 2, 3};
+        givenTemplate("@forIndex (int i : model.array)" +
+              "${index}-${i}," +
+              "@endfor");
+        thenOutputIs("0-1,1-2,2-3,");
+    }
+
+    @Test
     void loopWithCondition() {
         model.array = new int[]{1, 2, 3};
         givenTemplate("@for (int i : model.array)" +

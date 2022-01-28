@@ -141,6 +141,15 @@ When looping, you may use the `ForSupport`class to gain information about the lo
 @endfor
 ```
 
+If you only need the index, you may use the simpler `@forIndex` loop: It provides a local index variable.
+
+```xml
+@forIndex(var entryLoop : model)
+    <tr class="${index + 1) % 2 == 0 ? "even" : "odd"}">
+        ${entryLoop.title}
+    </tr>
+@endfor
+```
 ## Comments
 
 jte allows you to define comments in your templates. jte comments are not included in the output of your template:
